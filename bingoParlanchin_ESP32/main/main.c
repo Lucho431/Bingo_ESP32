@@ -38,7 +38,6 @@ static const char *TAG = "DEBUGGING";
 //variable del led onboard
 uint8_t ledPin = 0;
 //variables de los timers
-uint8_t flag_tim2 = 0; //timer del sonido
 uint8_t flag_tim3 = 0; //timer de 10 ms.
 //variables de estado
 T_MODO status_funcionamiento = SIN_MODO;
@@ -107,9 +106,9 @@ void app_main(void)
   		  flag_timerControl = 0;
   	  } //end if flag_timerControl
 
-  	  if (flag_tim2 != 0){
+  	  if (flag_timer22us != 0){
   		  updatePWM();
-  		  flag_tim2 = 0;
+  		  flag_timer22us = 0;
   	  } //end flag_tim2
 
   	  switch (status_funcionamiento){

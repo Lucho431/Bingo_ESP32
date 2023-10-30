@@ -35,7 +35,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_ae565 && [1/2] Building C object CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj
+Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_caec7 && [1/2] Building C object CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj
 Using built-in specs.
 COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
 Target: xtensa-esp32-elf
@@ -43,8 +43,8 @@ Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/gcc/config
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_ae565.dir/'
- /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1 -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ae565.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -Wno-frame-address -version -o /tmp/ccD8HDk1.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_caec7.dir/'
+ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1 -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_caec7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -Wno-frame-address -version -o /tmp/ccEIiaSO.s
 GNU C17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32-elf)
 	compiled by GNU C version 4.9.2, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
 
@@ -65,12 +65,12 @@ GNU C17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32-elf)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 653dc93e89b654627e5b7db857721226
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_ae565.dir/'
- /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj /tmp/ccD8HDk1.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_caec7.dir/'
+ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj /tmp/ccEIiaSO.s
 COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/
 LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.'
-[2/2] Linking C executable cmTC_ae565
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.'
+[2/2] Linking C executable cmTC_caec7
 Using built-in specs.
 COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
 COLLECT_LTO_WRAPPER=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper
@@ -81,9 +81,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
 COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/
 LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_ae565' '-dumpdir' 'cmTC_ae565.'
- /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNv67Ek.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_ae565 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_ae565' '-dumpdir' 'cmTC_ae565.'
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_caec7' '-dumpdir' 'cmTC_caec7.'
+ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH8eAU5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_caec7 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_caec7' '-dumpdir' 'cmTC_caec7.'
 
 
 
@@ -106,7 +106,7 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(xtensa-esp32-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_ae565 && [1/2] Building C object CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_caec7 && [1/2] Building C object CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc]
   ignore line: [Target: xtensa-esp32-elf]
@@ -114,8 +114,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (crosstool-NG esp-2022r1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_ae565.dir/']
-  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1 -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ae565.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -Wno-frame-address -version -o /tmp/ccD8HDk1.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_caec7.dir/']
+  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1 -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_caec7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlongcalls -Wno-frame-address -version -o /tmp/ccEIiaSO.s]
   ignore line: [GNU C17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32-elf)]
   ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
   ignore line: []
@@ -136,12 +136,12 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 653dc93e89b654627e5b7db857721226]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_ae565.dir/']
-  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj /tmp/ccD8HDk1.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_caec7.dir/']
+  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj /tmp/ccEIiaSO.s]
   ignore line: [COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/]
   ignore line: [LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.']
-  ignore line: [[2/2] Linking C executable cmTC_ae565]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.']
+  ignore line: [[2/2] Linking C executable cmTC_caec7]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper]
@@ -152,27 +152,27 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 11.2.0 (crosstool-NG esp-2022r1) ]
   ignore line: [COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/]
   ignore line: [LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_ae565' '-dumpdir' 'cmTC_ae565.']
-  link line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNv67Ek.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_ae565 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_caec7' '-dumpdir' 'cmTC_caec7.']
+  link line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH8eAU5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_caec7 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o]
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccNv67Ek.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccH8eAU5.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ae565] ==> ignore
+    arg [cmTC_caec7] ==> ignore
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o] ==> obj [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o]
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o] ==> obj [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o]
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o] ==> obj [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o]
     arg [-L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0] ==> dir [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0]
     arg [-L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc] ==> dir [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc]
     arg [-L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib] ==> dir [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib]
-    arg [CMakeFiles/cmTC_ae565.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [CMakeFiles/cmTC_caec7.dir/CMakeCCompilerABI.c.obj] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-lc] ==> lib [c]
     arg [-lnosys] ==> lib [nosys]
@@ -197,7 +197,7 @@ Parsed C implicit link information from above output:
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_48d77 && [1/2] Building CXX object CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj
+Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_d1057 && [1/2] Building CXX object CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj
 Using built-in specs.
 COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++
 Target: xtensa-esp32-elf
@@ -205,8 +205,8 @@ Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/gcc/config
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_48d77.dir/'
- /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1plus -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_48d77.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -Wno-frame-address -version -o /tmp/ccjxyfEV.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d1057.dir/'
+ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1plus -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d1057.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -Wno-frame-address -version -o /tmp/ccMOTc5F.s
 GNU C++17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32-elf)
 	compiled by GNU C version 4.9.2, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
 
@@ -233,12 +233,12 @@ GNU C++17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32-elf)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 69ef0c26a581aece6835fdfb15e451af
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_48d77.dir/'
- /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccjxyfEV.s
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d1057.dir/'
+ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccMOTc5F.s
 COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/
 LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.'
-[2/2] Linking CXX executable cmTC_48d77
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_d1057
 Using built-in specs.
 COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++
 COLLECT_LTO_WRAPPER=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper
@@ -249,9 +249,9 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (crosstool-NG esp-2022r1) 
 COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/
 LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_48d77' '-dumpdir' 'cmTC_48d77.'
- /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRAAHYe.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_48d77 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o
-COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_48d77' '-dumpdir' 'cmTC_48d77.'
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_d1057' '-dumpdir' 'cmTC_d1057.'
+ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZGc9q0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_d1057 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o
+COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_d1057' '-dumpdir' 'cmTC_d1057.'
 
 
 
@@ -280,7 +280,7 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(xtensa-esp32-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_48d77 && [1/2] Building CXX object CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_d1057 && [1/2] Building CXX object CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++]
   ignore line: [Target: xtensa-esp32-elf]
@@ -288,8 +288,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (crosstool-NG esp-2022r1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_48d77.dir/']
-  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1plus -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_48d77.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -Wno-frame-address -version -o /tmp/ccjxyfEV.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d1057.dir/']
+  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/cc1plus -quiet -v -iprefix /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/ /home/luciano/.espressif/tools/cmake/3.24.0/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d1057.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlongcalls -Wno-frame-address -version -o /tmp/ccMOTc5F.s]
   ignore line: [GNU C++17 (crosstool-NG esp-2022r1) version 11.2.0 (xtensa-esp32-elf)]
   ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
   ignore line: []
@@ -316,12 +316,12 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 69ef0c26a581aece6835fdfb15e451af]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_48d77.dir/']
-  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccjxyfEV.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d1057.dir/']
+  ignore line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccMOTc5F.s]
   ignore line: [COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/]
   ignore line: [LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [[2/2] Linking CXX executable cmTC_48d77]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [[2/2] Linking CXX executable cmTC_d1057]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper]
@@ -332,27 +332,27 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 11.2.0 (crosstool-NG esp-2022r1) ]
   ignore line: [COMPILER_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/]
   ignore line: [LIBRARY_PATH=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/:/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_48d77' '-dumpdir' 'cmTC_48d77.']
-  link line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRAAHYe.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_48d77 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'cmTC_d1057' '-dumpdir' 'cmTC_d1057.']
+  link line: [ /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2 -plugin /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so -plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZGc9q0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_d1057 /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0 -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc -L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtend.o /home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtn.o]
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../libexec/gcc/xtensa-esp32-elf/11.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccRAAHYe.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccZGc9q0.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_48d77] ==> ignore
+    arg [cmTC_d1057] ==> ignore
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o] ==> obj [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib/crt0.o]
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o] ==> obj [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crti.o]
     arg [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o] ==> obj [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/crtbegin.o]
     arg [-L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0] ==> dir [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0]
     arg [-L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc] ==> dir [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc]
     arg [-L/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib] ==> dir [/home/luciano/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/lib]
-    arg [CMakeFiles/cmTC_48d77.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [CMakeFiles/cmTC_d1057.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]
@@ -379,32 +379,32 @@ Parsed CXX implicit link information from above output:
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_a7970 && [1/2] Building C object CMakeFiles/cmTC_a7970.dir/CheckIncludeFile.c.obj
-[2/2] Linking C executable cmTC_a7970
+Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_9fc68 && [1/2] Building C object CMakeFiles/cmTC_9fc68.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_9fc68
 
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_d9e4f && [1/2] Building C object CMakeFiles/cmTC_d9e4f.dir/CheckIncludeFile.c.obj
-[2/2] Linking C executable cmTC_d9e4f
+Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_5ef81 && [1/2] Building C object CMakeFiles/cmTC_5ef81.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_5ef81
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_79c80 && [1/2] Building C object CMakeFiles/cmTC_79c80.dir/CheckIncludeFile.c.obj
-[2/2] Linking C executable cmTC_79c80
+Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_9b5e7 && [1/2] Building C object CMakeFiles/cmTC_9b5e7.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_9b5e7
 
 
 
 Determining size of time_t passed with the following output:
 Change Dir: /home/luciano/eclipse-workspaces/ws_prueba/Bingo_ESP32/bingoParlanchin_ESP32/build/bootloader/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_419f5 && [1/2] Building C object CMakeFiles/cmTC_419f5.dir/TIME_T_SIZE.c.obj
-[2/2] Linking C executable cmTC_419f5
+Run Build Command(s):/home/luciano/.espressif/tools/ninja/1.10.2/ninja cmTC_cb60f && [1/2] Building C object CMakeFiles/cmTC_cb60f.dir/TIME_T_SIZE.c.obj
+[2/2] Linking C executable cmTC_cb60f
 
 
 

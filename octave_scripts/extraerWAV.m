@@ -24,21 +24,24 @@ function extraerWAV(fileWav)
   endif
 
   audioReadWav = audioread(fileWav);
-  audioOffset = audioReadWav + 1;
-  audioNorm2 = audioOffset / 2;
-  audio163 = audioNorm2 * 163;
-  audio8bits = round(audio163);
+  audioReadWav (:, 2) = []; #Elimina la segunda columna de datos
+  offset = min(audioReadWav);
+  audioOffset = audioReadWav - offset; #Elimina el offset
+  valorNorm = max(audioOffset);
+  audioNorm = audioOffset / valorNorm; #Normaliza el vector
+  audio1024 = audioNorm * 1024;
+  audio10bits = round(audio1024);
 
-  audioLenght = size(audio8bits)
+  audioLenght = size(audio10bits);
 
   vectorSalida = ones (1, audioLenght(1));
   for i=1:audioLenght(1)
-    vectorSalida(i) = audio8bits(i,1);
+    vectorSalida(i) = audio10bits(i);
   endfor
 
   file_id = fopen('outWav.txt', 'w');
 
-  fprintf(file_id, "audio1[] = { ");
+  fprintf(file_id, "uint16_t noventa[] = { ");
 
   renglon = 0;
   for i = 1:audioLenght(1)
