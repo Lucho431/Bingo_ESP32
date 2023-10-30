@@ -185,7 +185,7 @@ void app_main(void)
   				  break;
   			  }
 
-  			  enunciaNumero(numero);
+  			  setNumero(numero);
   			  ESP_LOGI(TAG, "numero: %d", numero);
   			  repiteNumeros[numero] = 1;
   			  listaNumeros[cuentaNumeros] = numero;
@@ -219,7 +219,7 @@ void app_main(void)
   				  break;
   			  }
 
-  			  enunciaNumero(numero);
+  			  setNumero(numero);
   			  ESP_LOGI(TAG, "numero: %d", numero);
   			  repiteNumeros[numero] = 1;
   			  listaNumeros[cuentaNumeros] = numero;
@@ -275,7 +275,7 @@ void app_main(void)
 
   				  if (indiceNumeros != 0) indiceNumeros--;
 
-  				  enunciaNumero( listaNumeros[indiceNumeros] );
+  				  setNumero( listaNumeros[indiceNumeros] );
   				  ESP_LOGI(TAG, "ya salio el: %d", listaNumeros[indiceNumeros]);
   			  } //fin if IN_ATRAS
 
@@ -284,7 +284,7 @@ void app_main(void)
 
   				  if (indiceNumeros < (cuentaNumeros - 1) ) indiceNumeros++;
 
-  				  enunciaNumero( listaNumeros[indiceNumeros] );
+  				  setNumero( listaNumeros[indiceNumeros] );
   				  ESP_LOGI(TAG, "ya salio el: %d", listaNumeros[indiceNumeros]);
   			  } //fin if IN_ADELANTE
 		  break;

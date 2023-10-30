@@ -18,27 +18,23 @@
 
 
 //variables de reproduccion de WAV
-uint16_t* p_audio;
-uint32_t audioIndex = 0;
+const uint16_t* p_audio;
+uint32_t duracion;
+uint32_t indice_duracion;
 
 uint8_t flag_audio = 0;
-T_SONIDO statusSonido = SILENCIO;
 
-const uint16_t* buff_audio[3]; //buffer que almacena los punteros de los sonidos
-uint8_t buff_audioIndex = 0; //valor máximo 2 (3 sonidos buffereados)
-uint8_t buff_audioSize = 0; //cantidad de punteros almacenados en el buffer
-
-uint32_t buff_duracion[3]; //buffer que almacena los tamaños de los sonidos
-
+//variables de setNumero
 T_NUMERO buff_numero[3];
-uint8_t cant_numero = 0;
+uint8_t cant_numero = 0; //valor maximo del indice del buffer en esta reproduccion
 uint8_t indice_numero = 0;
 
 void init_sonido (void){
+	p_audio = setAudio(buff_numero[0]);
+	duracion = setDuracionAudio(buff_numero[0]);
 
-
-
-	asm volatile ("nop");
+	indice_duracion = 0;
+	flag_audio = 1;
 }
 
 
@@ -50,250 +46,27 @@ void updatePWM (void){
 		return;
 	}
 
-	ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, p_audio[audioIndex]);
+	//reproduce la siguiente muestra
+	ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, p_audio[indice_duracion]);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
+	indice_duracion++;
 
+	if (indice_duracion > duracion - 1){ //si se alcanzo la duracion del wav
+		indice_numero++;
 
+		if (indice_numero > cant_numero){ //si se pasó el tamaño actual del buffer
+			flag_audio = 0;
+			return;
+		} //fin if indice_numero
 
-	switch (statusSonido){
-		case SONIDO:
+		p_audio = setAudio(buff_numero[indice_numero]);
+		duracion = setDuracionAudio(buff_numero[indice_numero]);
+		indice_duracion = 0;
 
-			if (!flag_audio){
-				statusSonido = SILENCIO;
-				break;
-			}
-
-
-
-
-			gpio_set_level(PIN_LED, 1); //HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
-			//TIM2->CCR1 = p_audio [audioIndex];
-			ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, p_audio[audioIndex]);
-			ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
-			audioIndex++;
-
-			if (audioIndex > (audioIndex - 1)){
-
-				if (buff_audioIndex < buff_audioSize){
-					buff_audioIndex++;
-				}else{
-					statusSonido = SILENCIO;
-					flag_audio = 0;
-				}
-
-				audioIndex = 0;
-			}
-		break;
-		case SILENCIO:
-
-			gpio_set_level(PIN_LED, 0); //HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
-			//TIM2->CCR1 = 82;
-			if (flag_audio != 0){
-				audioIndex = 0;
-				buff_audioIndex = 0;
-				statusSonido = SONIDO;
-			}
-
-		break;
-		default:
-		break;
-	} //end switch statusSonido
-
+	} //fin if indice_duracion...
 } //fin updatePWM()
 
 
-void enunciaNumero(uint8_t n){
-
-	if (n > 90) return;
-
-	uint8_t decena = n / 10;
-	uint8_t unidad = n % 10;
-
-	buff_audioSize = 0;
-	audioIndex = 0;
-
-	switch (decena) {
-		case 1:
-			switch (n) {
-				case 10:
-
-					buff_duracion[buff_audioSize] = setDuracionAudio(DIEZ);
-					buff_audio[buff_audioSize] = setAudio(DIEZ);
-				break;
-				case 11:
-					buff_duracion[buff_audioSize] = setDuracionAudio(ONCE);
-					buff_audio[buff_audioSize] = setAudio(ONCE);
-				break;
-				case 12:
-					buff_duracion[buff_audioSize] = setDuracionAudio(DOCE);
-					buff_audio[buff_audioSize] = setAudio(DOCE);
-				break;
-				case 13:
-					buff_duracion[buff_audioSize] = setDuracionAudio(TRECE);
-					buff_audio[buff_audioSize] = setAudio(TRECE);
-				break;
-				case 14:
-					buff_duracion[buff_audioSize] = setDuracionAudio(CATORCE);
-					buff_audio[buff_audioSize] = setAudio(CATORCE);
-				break;
-				case 15:
-					buff_duracion[buff_audioSize] = setDuracionAudio(QUINCE);
-					buff_audio[buff_audioSize] = setAudio(QUINCE);
-				break;
-				default:
-					buff_duracion[buff_audioSize] = setDuracionAudio(DIECI);
-					buff_audio[buff_audioSize] = setAudio(DIECI);
-					buff_audioSize++;
-				break;
-			} //fin switch n
-
-		break;
-		case 2:
-			if (n == 20){
-				buff_duracion[buff_audioSize] = setDuracionAudio(VEINTE);
-				buff_audio[buff_audioSize] = setAudio(VEINTE);
-			}else{
-
-				buff_duracion[buff_audioSize] = setDuracionAudio(VEINTI);
-				buff_audio[buff_audioSize] = setAudio(VEINTI);
-				buff_audioSize++;
-			}
-
-		break;
-		case 3:
-			buff_duracion[buff_audioSize] = setDuracionAudio(TREINTA);
-			buff_audio[buff_audioSize] = setAudio(TREINTA);
-			if (n > 30){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		case 4:
-			buff_duracion[buff_audioSize] = setDuracionAudio(CUARENTA);
-			buff_audio[buff_audioSize] = setAudio(CUARENTA);
-			if (n > 40){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		case 5:
-			buff_duracion[buff_audioSize] = setDuracionAudio(CINCUENTA);
-			buff_audio[buff_audioSize] = setAudio(CINCUENTA);
-			if (n > 50){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		case 6:
-			buff_duracion[buff_audioSize] = setDuracionAudio(SESENTA);
-			buff_audio[buff_audioSize] = setAudio(SESENTA);
-			if (n > 60){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		case 7:
-			buff_duracion[buff_audioSize] = setDuracionAudio(SETENTA);
-			buff_audio[buff_audioSize] = setAudio(SETENTA);
-			if (n > 70){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		case 8:
-			buff_duracion[buff_audioSize] = setDuracionAudio(OCHENTA);
-			buff_audio[buff_audioSize] = setAudio(OCHENTA);
-			if (n > 80){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		case 9:
-			buff_duracion[buff_audioSize] = setDuracionAudio(NOVENTA);
-			buff_audio[buff_audioSize] = setAudio(NOVENTA);
-			if (n > 90){
-				buff_audioSize++;
-				buff_duracion[buff_audioSize] = setDuracionAudio(_Y);
-				buff_audio[buff_audioSize] = setAudio(_Y);
-				buff_audioSize++;
-			}
-		break;
-		default:
-		break;
-	}
-
-	switch (unidad) {
-		case 0:
-			if (n < 10){
-				buff_duracion[buff_audioSize] = setDuracionAudio(CERO);
-				buff_audio[buff_audioSize] = setAudio(CERO);
-			}
-		break;
-		case 1:
-			if (n != 11){
-				buff_duracion[buff_audioSize] = setDuracionAudio(UNO);
-				buff_audio[buff_audioSize] = setAudio(UNO);
-			}
-		break;
-		case 2:
-			if (n != 12){
-				buff_duracion[buff_audioSize] = setDuracionAudio(DOS);
-				buff_audio[buff_audioSize] = setAudio(DOS);
-			}
-		break;
-		case 3:
-			if (n != 13){
-				buff_duracion[buff_audioSize] = setDuracionAudio(TRES);
-				buff_audio[buff_audioSize] = setAudio(TRES);
-			}
-		break;
-		case 4:
-			if (n != 14){
-				buff_duracion[buff_audioSize] = setDuracionAudio(CUATRO);
-				buff_audio[buff_audioSize] = setAudio(CUATRO);
-			}
-		break;
-		case 5:
-			if (n != 15){
-				buff_duracion[buff_audioSize] = setDuracionAudio(CINCO);
-				buff_audio[buff_audioSize] = setAudio(CINCO);
-			}
-		break;
-		case 6:
-			buff_duracion[buff_audioSize] = setDuracionAudio(SEIS);
-			buff_audio[buff_audioSize] = setAudio(SEIS);
-		break;
-		case 7:
-			buff_duracion[buff_audioSize] = setDuracionAudio(SIETE);
-			buff_audio[buff_audioSize] = setAudio(SIETE);
-		break;
-		case 8:
-			buff_duracion[buff_audioSize] = setDuracionAudio(OCHO);
-			buff_audio[buff_audioSize] = setAudio(OCHO);
-		break;
-		case 9:
-			buff_duracion[buff_audioSize] = setDuracionAudio(NUEVE);
-			buff_audio[buff_audioSize] = setAudio(NUEVE);
-		break;
-		default:
-		break;
-	}
-
-	flag_audio = 1;
-
-} //fin enunciaNumero()
 
 
 void setNumero (uint8_t n){
@@ -305,13 +78,12 @@ void setNumero (uint8_t n){
 
 	cant_numero = 0;
 	indice_numero = 0;
-	audioIndex = 0;
 
 	switch (decena) {
 		case 1:
 			switch (n) {
 				case 10:
-					buff_numero[cant_numero] = DIEZ
+					buff_numero[cant_numero] = DIEZ;
 				break;
 				case 11:
 					buff_numero[cant_numero] = ONCE;
@@ -402,7 +174,7 @@ void setNumero (uint8_t n){
 		break;
 		default:
 		break;
-	}
+	} //switch decena
 
 	switch (unidad) {
 		case 0:
@@ -449,8 +221,6 @@ void setNumero (uint8_t n){
 		break;
 		default:
 		break;
-	}
-
-	flag_audio = 1;
+	} //switch unidad
 	init_sonido();
 } //fin setNumero()

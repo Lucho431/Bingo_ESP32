@@ -26,9 +26,8 @@ typedef enum{
 #define SILENCIO_LARGO 44100
 
 //// FUNCIONES ////
-void init_sonido (void);
+//void init_sonido (void);
 void updatePWM (void);
-void enunciaNumero(uint8_t);
 void setNumero(uint8_t);
 
 #endif /* INC_SONIDOS_LFS_H_ */
