@@ -1,0 +1,6 @@
+CMake Error at run_serial_tool.cmake:55 (message):
+  
+  python;;/home/luciano/programas/ESP32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32
+  failed
+
+

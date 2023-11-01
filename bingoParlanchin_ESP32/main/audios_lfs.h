@@ -40,7 +40,7 @@ typedef enum{
 	NOVENTA,
 }T_NUMERO;
 
-const uint16_t *setAudio (T_NUMERO);
+const uint8_t *setAudio (T_NUMERO);
 uint32_t setDuracionAudio (T_NUMERO);
 
 #endif /* MAIN_AUDIOS_LFS_H_ */

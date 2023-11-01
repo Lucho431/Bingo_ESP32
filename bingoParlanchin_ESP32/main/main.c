@@ -19,6 +19,11 @@
 #include "esp_timer.h"
 #include "driver/ledc.h"
 #include "esp_err.h"
+#include "driver/dac.h"
+#include "driver/dac_common.h"
+#include "driver/gptimer.h"
+#include "driver/spi_master.h"
+
 
 #include "pines_esp32_lfs.h"
 #include "IOports_lfs.h"
@@ -59,16 +64,18 @@ esp_timer_handle_t hTimer;
 uint32_t timerId = 1;
 uint8_t flag_timerControl = 0; //timer de 10 ms.
 uint8_t flag_timer22us = 0;
+//variables del SPI
+spi_device_handle_t handler_spi;
 
 
 //declaracion de funciones
 void config_gpio(void);
 void vTimerCallback (TimerHandle_t pxTimer);
 esp_err_t set_timers (void);
-void set_pwm (void);
+void set_dac (void);
 //esp_err_t uart_init (void);
 //esp_err_t i2c_init (void);
-//esp_err_t spi_init (void);
+esp_err_t spi_init (void);
 //static void uartTx_task(void*);
 //static void uartRx_task(void*);
 
@@ -79,10 +86,15 @@ void app_main(void)
 
     /* Configure the peripheral according to the LED type */
     config_gpio();
+    spi_init();
+    set_dac();
     set_timers();
-    set_pwm();
+//    set_pwm();
 
     bootloader_random_disable();
+
+    //PREUBA DE SONIDO
+//    setNumero(33); //comentar cuando no se requiera
 
     while (1) {
 //        ESP_LOGI(TAG, "Turning the LED %s!", s_led_state == true ? "ON" : "OFF");
@@ -378,7 +390,7 @@ void set_pwm (void){
 
     // Prepare and then apply the LEDC PWM timer configuration
     ledc_timer_config_t ledc_timer = {
-        .speed_mode       = LEDC_LOW_SPEED_MODE,
+        .speed_mode       = LEDC_HIGH_SPEED_MODE,
         .timer_num        = LEDC_TIMER_0,
         .duty_resolution  = LEDC_TIMER_10_BIT, // Set duty resolution to 10 bits
         .freq_hz          = 44100,  // Set output frequency at 44,1 kHz
@@ -388,14 +400,61 @@ void set_pwm (void){
 
     // Prepare and then apply the LEDC PWM channel configuration
     ledc_channel_config_t ledc_channel = {
-        .speed_mode     = LEDC_LOW_SPEED_MODE,
+        .speed_mode     = LEDC_HIGH_SPEED_MODE,
         .channel        = LEDC_CHANNEL_0,
         .timer_sel      = LEDC_TIMER_0,
         .intr_type      = LEDC_INTR_DISABLE,
         .gpio_num       = PIN_PWM,
-        .duty           = 511, // Set duty to 50%. ((2 ** 10) - 1) * 50% = 4095
+        .duty           = 128, // Set duty to 50%. ((2 ** 10) - 1) * 50% = 4095
         .hpoint         = 0
     };
     ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
 
+    ledc_fade_func_uninstall();
+
+
 } //fin set_pwm()
+
+
+void set_dac (void){
+	dac_output_enable(DAC_CHANNEL_2);
+} //fin set_dac()
+
+
+esp_err_t spi_init (void){
+	esp_err_t ret;
+
+	//configuracion del bus SPI
+	spi_bus_config_t spi_bus_config = {	.mosi_io_num = PIN_SPI_MOSI,
+										//.miso_io_num = PIN_SPI_MISO,
+										.sclk_io_num = PIN_SPI_SCLK,
+										.quadhd_io_num = -1, // -1 : no se usa.
+										.quadwp_io_num = -1, // -1 : no se usa.
+										.max_transfer_sz = 0,};
+
+	//configuiracion del dispositivo SPI que agrego
+	/*
+	 * SPI mode, representing a pair of (CPOL, CPHA) configuration:
+						0: (0, 0)
+						1: (0, 1)
+						2: (1, 0)
+						3: (1, 1)
+	 */
+	spi_device_interface_config_t spi_device_interface_config = {	.mode = 0, //no se por qué
+																	.duty_cycle_pos = 0, //duty del %50
+																	.clock_speed_hz = 100000,
+																	//.spics_io_num = PIN_SPI_CS,
+//																	.flags = SPI_DEVICE_HALFDUPLEX,
+																	.queue_size = 1,
+																	.pre_cb = NULL, //pre-CallBack
+																	.post_cb = NULL,}; //post-CallBack
+
+
+	spi_bus_initialize(SPI3_HOST, &spi_bus_config, SPI_DMA_CH_AUTO);
+	ret = spi_bus_add_device(SPI3_HOST, &spi_device_interface_config, &handler_spi);
+
+
+	assert(ret == ESP_OK);
+	return ret;
+
+} //fin spi_init()

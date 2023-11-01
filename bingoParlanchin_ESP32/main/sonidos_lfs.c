@@ -11,6 +11,8 @@
 #include "driver/gpio.h"
 #include "pines_esp32_lfs.h"
 #include "driver/ledc.h"
+#include "driver/dac_common.h"
+#include "driver/dac.h"
 
 
 //// CONSTANTES ////
@@ -18,7 +20,7 @@
 
 
 //variables de reproduccion de WAV
-const uint16_t* p_audio;
+const uint8_t* p_audio;
 uint32_t duracion;
 uint32_t indice_duracion;
 
@@ -41,15 +43,17 @@ void init_sonido (void){
 void updatePWM (void){
 
 	if (!flag_audio){
-		ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 512);
-		ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
+//		ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, 128);
+//		ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
+		dac_output_voltage(DAC_CHANNEL_2, 128);
 		return;
 	}
 
 	//reproduce la siguiente muestra
-	ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, p_audio[indice_duracion]);
-	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
-	indice_duracion++;
+//	ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, p_audio[indice_duracion]);
+//	ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
+	dac_output_voltage(DAC_CHANNEL_2, p_audio[indice_duracion]);
+	indice_duracion += 2;
 
 	if (indice_duracion > duracion - 1){ //si se alcanzo la duracion del wav
 		indice_numero++;
