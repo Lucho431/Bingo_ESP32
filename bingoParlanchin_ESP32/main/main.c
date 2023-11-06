@@ -28,6 +28,7 @@
 #include "pines_esp32_lfs.h"
 #include "IOports_lfs.h"
 #include "sonidos_lfs.h"
+#include "reg_595_ESP32_lfs.h"
 
 
 typedef enum{
@@ -66,6 +67,11 @@ uint8_t flag_timerControl = 0; //timer de 10 ms.
 uint8_t flag_timer22us = 0;
 //variables del SPI
 spi_device_handle_t handler_spi;
+//variables de imprimeNumeros
+uint8_t tramaNum[2];
+spi_transaction_t t = {	.tx_buffer = tramaNum,
+						.length = 16}; //bits
+uint8_t codigoNum[10] = {0xFC, 0xE0, 0xFA, 0xF2, 0x66, 0xA6, 0xBE, 0xE0, 0xFE, 0xF6};
 
 
 //declaracion de funciones
@@ -78,6 +84,7 @@ void set_dac (void);
 esp_err_t spi_init (void);
 //static void uartTx_task(void*);
 //static void uartRx_task(void*);
+void imprimeNumero(uint8_t);
 
 
 void app_main(void)
@@ -196,7 +203,7 @@ void app_main(void)
   			  if (repiteNumeros[numero] != 0){
   				  break;
   			  }
-
+  			  imprimeNumero(numero);
   			  setNumero(numero);
   			  ESP_LOGI(TAG, "numero: %d", numero);
   			  repiteNumeros[numero] = 1;
@@ -230,7 +237,7 @@ void app_main(void)
   			  if (repiteNumeros[numero] != 0){
   				  break;
   			  }
-
+  			  imprimeNumero(numero);
   			  setNumero(numero);
   			  ESP_LOGI(TAG, "numero: %d", numero);
   			  repiteNumeros[numero] = 1;
@@ -287,6 +294,7 @@ void app_main(void)
 
   				  if (indiceNumeros != 0) indiceNumeros--;
 
+  				  imprimeNumero( listaNumeros[indiceNumeros] );
   				  setNumero( listaNumeros[indiceNumeros] );
   				  ESP_LOGI(TAG, "ya salio el: %d", listaNumeros[indiceNumeros]);
   			  } //fin if IN_ATRAS
@@ -296,6 +304,7 @@ void app_main(void)
 
   				  if (indiceNumeros < (cuentaNumeros - 1) ) indiceNumeros++;
 
+  				  imprimeNumero( listaNumeros[indiceNumeros] );
   				  setNumero( listaNumeros[indiceNumeros] );
   				  ESP_LOGI(TAG, "ya salio el: %d", listaNumeros[indiceNumeros]);
   			  } //fin if IN_ADELANTE
@@ -372,12 +381,14 @@ void config_gpio(void)
     gpio_reset_pin(PIN_IN_MODO);
     gpio_reset_pin(PIN_IN_START_STOP);
     gpio_reset_pin(PIN_IN_ADELANTE);
+    gpio_reset_pin(PIN_595_ST);
 
     gpio_set_direction(PIN_IN_ATRAS, GPIO_MODE_INPUT);
     gpio_set_direction(PIN_IN_MODO, GPIO_MODE_INPUT);
     gpio_set_direction(PIN_IN_START_STOP, GPIO_MODE_INPUT);
     gpio_set_direction(PIN_IN_ADELANTE, GPIO_MODE_INPUT);
     gpio_set_direction(PIN_LED, GPIO_MODE_OUTPUT);
+    gpio_set_direction(PIN_595_ST, GPIO_MODE_OUTPUT);
 
     gpio_set_pull_mode(PIN_IN_ATRAS, GPIO_PULLUP_ONLY);
     gpio_set_pull_mode(PIN_IN_MODO, GPIO_PULLUP_ONLY);
@@ -453,8 +464,21 @@ esp_err_t spi_init (void){
 	spi_bus_initialize(SPI3_HOST, &spi_bus_config, SPI_DMA_CH_AUTO);
 	ret = spi_bus_add_device(SPI3_HOST, &spi_device_interface_config, &handler_spi);
 
+	reg_595_init(SPI3_HOST, &spi_bus_config, &spi_device_interface_config, PIN_595_ST);
+
 
 	assert(ret == ESP_OK);
 	return ret;
 
 } //fin spi_init()
+
+
+void imprimeNumero(uint8_t n){
+	uint8_t decena = n / 10;
+	uint8_t unidad = n % 10;
+
+	tramaNum[0] = codigoNum[decena];
+	tramaNum[1] = codigoNum[unidad];
+
+	reg_595_startTx(&t);
+} //fin imprimeNumero()
